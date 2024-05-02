@@ -25,4 +25,13 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    '@symfony/stimulus-bridge' => [
+        'version' => '3.2.2',
+    ],
+    'chart.js/auto' => [
+        'version' => '3.9.1',
+    ],
+    'bs-custom-file-input' => [
+        'version' => '1.3.4',
+    ],
 ];

@@ -5,6 +5,14 @@ import './bootstrap.js';
  * This file will be included onto the page via the importmap() Twig function,
  * which should already be in your base.html.twig.
  */
-import './styles/app.css';
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+import 'bootstrap';
+import bsCustomFileInput from 'bs-custom-file-input';
+bsCustomFileInput.init();
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+})
+
