@@ -2,7 +2,7 @@
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
-    "prefer-stable": true,
+    "prefer-stalsble": true,
     "require": {
         "php": ">=8.3",
         "ext-ctype": "*",
