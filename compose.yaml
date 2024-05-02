@@ -11,6 +11,7 @@ services:
       - skeletonbr
     build:
       context: ./docker/php
+      dockerfile: Dockerfile
     volumes:
       - '.:/var/www/html'
       - './docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro'
@@ -51,7 +52,7 @@ services:
     networks:
       - skeletonbr
     ports:
-      - '5432:5432'
+      - '5431:5432'
     working_dir: /app
     restart: always
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
