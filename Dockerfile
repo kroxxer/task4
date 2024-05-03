@@ -154,6 +154,6 @@ RUN set -x \
     && if [ -f "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi \
 # Bring in curl and ca-certificates to make registering on DNS SD easier
     && apk add --no-cache curl ca-certificates
-WORKDIR /www
+WORKDIR /var/www/html
 CMD docker compose -f ./compose.yaml up -d
 
