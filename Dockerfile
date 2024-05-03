@@ -127,7 +127,7 @@ RUN set -o errexit -o nounset -o pipefail -o xtrace; \
     rm -fr /tmp/* /var/tmp/*
 
 # Retrieve the script used to install PHP extensions from the source container.
-#COPY --from=mlocati/php-extension-installer:2.1.10 /usr/bin/install-php-extensions /usr/local/bin/
+COPY --from=mlocati/php-extension-installer:2.1.10 /usr/bin/install-php-extensions /usr/local/bin/
 
 RUN set -o errexit -o nounset -o pipefail -o xtrace; \
     \
@@ -149,11 +149,11 @@ RUN set -o errexit -o nounset -o pipefail -o xtrace; \
         zip
 
 
-#COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-#RUN set -o errexit -o nounset -o pipefail -o xtrace; \
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN set -o errexit -o nounset -o pipefail -o xtrace; \
     \
 #    composer --global config repos.packagist composer 'https://mirrors.tencent.com/composer/'
-#ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 
 WORKDIR /var/www/html
