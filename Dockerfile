@@ -153,7 +153,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN set -o errexit -o nounset -o pipefail -o xtrace; \
     \
 #    composer --global config repos.packagist composer 'https://mirrors.tencent.com/composer/'
-ENV COMPOSER_ALLOW_SUPERUSER=1
 
 
 WORKDIR /var/www/html
