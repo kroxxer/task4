@@ -82,3 +82,5 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 
 WORKDIR /var/www/html
+CMD docker compose -f ./compose.yaml up -d
+
