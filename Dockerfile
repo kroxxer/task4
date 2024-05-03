@@ -80,6 +80,7 @@ RUN set -o errexit -o nounset -o pipefail -o xtrace; \
     composer --global config repos.packagist composer 'https://mirrors.tencent.com/composer/'
 ENV COMPOSER_ALLOW_SUPERUSER=1
 WORKDIR /var/www/html
+CMD ["symfony","server:start"]
 
 FROM nginx:1.25.5-alpine-slim
 
@@ -155,5 +156,5 @@ RUN set -x \
 # Bring in curl and ca-certificates to make registering on DNS SD easier
     && apk add --no-cache curl ca-certificates
 WORKDIR /var/www/html
-CMD docker compose -f ./compose.yaml up -d
+
 
