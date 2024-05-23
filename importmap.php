@@ -25,13 +25,14 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
-    '@symfony/stimulus-bridge' => [
-        'version' => '3.2.2',
+    'bootstrap' => [
+        'version' => '5.3.3',
     ],
-    'chart.js/auto' => [
-        'version' => '3.9.1',
+    '@popperjs/core' => [
+        'version' => '2.11.8',
     ],
-    'bs-custom-file-input' => [
-        'version' => '1.3.4',
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
     ],
 ];
