@@ -18,7 +18,6 @@ class LoginController extends AbstractController
     {
         $email = $authenticationUtils->getLastUsername();
         $error = $authenticationUtils->getLastAuthenticationError();
-        dump($error);
         $errorMessage = '';
 
         if ($error != null)
