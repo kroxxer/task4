@@ -31,7 +31,8 @@ return [
     'chart.js/auto' => [
         'version' => '3.9.1',
     ],
-    'bs-custom-file-input' => [
-        'version' => '1.3.4',
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
     ]
 ];
