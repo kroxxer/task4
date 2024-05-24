@@ -37,17 +37,17 @@
         <br>
         <div class="container">
             {{ form_start(registrationForm) }}
-                <div class="form-floating mb-3 px-4">
+                <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.email) }}
                     <label>Email</label>
                     {{ form_errors(registrationForm.email) }}
                 </div>
-                <div class="form-floating mb-3 px-4">
+                <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.plainPassword) }}
                     <label>Password</label>
                     {{ form_errors(registrationForm.plainPassword) }}
                 </div>
-                <div class="form-floating mb-3 px-4">
+                <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.name) }}
                     <label>Name</label>
                     {{ form_errors(registrationForm.name) }}
